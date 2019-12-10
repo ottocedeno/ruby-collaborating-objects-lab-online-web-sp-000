@@ -25,7 +25,7 @@ class Artist
 
   def self.find_or_create_by_name(artist_name)
     existing_artist = self.all.detect {|artist_obj| artist_obj.name == artist_name}
-    existing_artist ? existing_artist : Artist.new(artist_name)
+    existing_artist ? existing_artist : self.new(artist_name)
   end
 
   def print_songs
