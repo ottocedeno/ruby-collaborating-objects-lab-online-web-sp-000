@@ -6,6 +6,7 @@ class Artist
 
   @@all = []
 
+  #get in the habit of writing a #save method to do the second step so the app is more abstract
   def initialize(name)
     @name = name
     @@all << self
